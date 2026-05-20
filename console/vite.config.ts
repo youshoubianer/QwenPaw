@@ -18,8 +18,8 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
   // Empty = same-origin; frontend and backend served together, no hardcoded host.
   // Use a dedicated Vite-prefixed key so unrelated shell BASE_URL values don't leak into the build.
-  const apiBaseUrl = env.VITE_API_BASE_URL ?? "/qwenpaw";
-  const basePath = env.VITE_BASE_URL ?? "/qwenpaw";
+  const apiBaseUrl = env.VITE_API_BASE_URL ?? "/";
+  const basePath = env.VITE_BASE_URL ?? "/";
 
   return {
     base: basePath,

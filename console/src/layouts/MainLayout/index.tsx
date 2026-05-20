@@ -2,8 +2,8 @@ import { Suspense } from "react";
 import { Layout, Spin } from "antd";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import Sidebar from "../Sidebar";
-import Header from "../Header";
+// import Sidebar from "../Sidebar";
+// import Header from "../Header";
 import ConsolePollService from "../../components/ConsolePollService";
 import { ChunkErrorBoundary } from "../../components/ChunkErrorBoundary";
 import { lazyImportWithRetry } from "../../utils/lazyWithRetry";
@@ -90,10 +90,10 @@ export default function MainLayout() {
 
   return (
     <Layout className={styles.mainLayout}>
-      <Header />
+      {/* <Header /> */}
       <Layout>
-        <Sidebar selectedKey={selectedKey} />
-        <Content className="page-container">
+        {/* <Sidebar selectedKey={selectedKey} /> */}
+        <Content className="page-container" style={{ marginLeft: 8, marginTop: 10}}>
           <ConsolePollService />
           <div className="page-content">
             <ChunkErrorBoundary resetKey={currentPath}>
